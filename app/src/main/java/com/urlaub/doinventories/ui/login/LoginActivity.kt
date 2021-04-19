@@ -29,6 +29,7 @@ class LoginActivity : AppCompatActivity() {
         val username = findViewById<EditText>(R.id.username)
         val password = findViewById<EditText>(R.id.password)
         val login = findViewById<Button>(R.id.login)
+        val skip = findViewById<Button>(R.id.skip)
         val loading = findViewById<ProgressBar>(R.id.loading)
 
         loginViewModel = ViewModelProvider(this, LoginViewModelFactory())
@@ -95,6 +96,21 @@ class LoginActivity : AppCompatActivity() {
                 loginViewModel.login(username.text.toString(), password.text.toString())
             }
         }
+        skip.setOnClickListener {
+            /*
+                                                                                    ▄▄
+▀███▀▀▀██▄            ██    ██                                ██              ██    ██
+  ██    ██            ██    ██                               ▄██▄             ██
+  ██    █████  ▀███ ████████████  ▄██▀██▄▀████████▄         ▄█▀██▄    ▄██▀████████▀███   ▄██▀██▄▀████████▄
+  ██▀▀▀█▄▄ ██    ██   ██    ██   ██▀   ▀██ ██    ██        ▄█  ▀██   ██▀  ██  ██    ██  ██▀   ▀██ ██    ██
+  ██    ▀█ ██    ██   ██    ██   ██     ██ ██    ██        ████████  ██       ██    ██  ██     ██ ██    ██
+  ██    ▄█ ██    ██   ██    ██   ██▄   ▄██ ██    ██       █▀      ██ ██▄    ▄ ██    ██  ██▄   ▄██ ██    ██
+▄████████  ▀████▀███▄ ▀████ ▀████ ▀█████▀▄████  ████▄   ▄███▄   ▄████▄█████▀  ▀████████▄ ▀█████▀▄████  ████▄
+  */
+            /
+        }
+
+
     }
 
     private fun updateUiWithUser(model: LoggedInUserView) {
