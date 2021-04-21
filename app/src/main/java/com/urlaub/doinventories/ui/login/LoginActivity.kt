@@ -1,6 +1,7 @@
 package com.urlaub.doinventories.ui.login
 
 import android.app.Activity
+import android.content.Intent
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
@@ -16,6 +17,7 @@ import android.widget.ProgressBar
 import android.widget.Toast
 
 import com.urlaub.doinventories.R
+import com.urlaub.doinventories.ui.inventory.InventoryActivity
 
 class LoginActivity : AppCompatActivity() {
 
@@ -96,20 +98,14 @@ class LoginActivity : AppCompatActivity() {
                 loginViewModel.login(username.text.toString(), password.text.toString())
             }
         }
+
+        //This code changes which XML layout is on the screen
         skip.setOnClickListener {
-            /*
-                                                                                    ▄▄
-▀███▀▀▀██▄            ██    ██                                ██              ██    ██
-  ██    ██            ██    ██                               ▄██▄             ██
-  ██    █████  ▀███ ████████████  ▄██▀██▄▀████████▄         ▄█▀██▄    ▄██▀████████▀███   ▄██▀██▄▀████████▄
-  ██▀▀▀█▄▄ ██    ██   ██    ██   ██▀   ▀██ ██    ██        ▄█  ▀██   ██▀  ██  ██    ██  ██▀   ▀██ ██    ██
-  ██    ▀█ ██    ██   ██    ██   ██     ██ ██    ██        ████████  ██       ██    ██  ██     ██ ██    ██
-  ██    ▄█ ██    ██   ██    ██   ██▄   ▄██ ██    ██       █▀      ██ ██▄    ▄ ██    ██  ██▄   ▄██ ██    ██
-▄████████  ▀████▀███▄ ▀████ ▀████ ▀█████▀▄████  ████▄   ▄███▄   ▄████▄█████▀  ▀████████▄ ▀█████▀▄████  ████▄
-            */
+            val intent = Intent(this, InventoryActivity::class.java)
+
+            startActivity(intent)
 
         }
-
 
     }
 
