@@ -17,4 +17,17 @@
     <string name="relocate_button">Relocate Item</string>
     <string name="add_button">Add New Item</string>
 
+    <string-array name="test_building">
+        <item>Kent</item>
+        <item>RITT</item>
+        <item>Licht</item>
+        <item>Fogarty</item>
+        <item>Newport</item>
+        <item>Steadman</item>
+        <item>Dorrance</item>
+        <item>Washington</item>
+        <item>Record Center</item>
+    </string-array>
+
+
 </resources>

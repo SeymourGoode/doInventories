@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context="ui.inventory.InventoryActivity">
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -22,24 +23,24 @@
             android:id="@+id/button1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="69dp"
+            android:layout_marginBottom="@dimen/that_margin"
             android:text="@string/search_button"
-            android:textSize="24sp" />
+            android:textSize="@dimen/button_font" />
 
         <Button
             android:id="@+id/button2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/relocate_button"
-            android:textSize="24sp" />
+            android:textSize="@dimen/button_font" />
 
         <Button
             android:id="@+id/button3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="69dp"
+            android:layout_marginTop="@dimen/that_margin"
             android:text="@string/add_button"
-            android:textSize="24sp" />
+            android:textSize="@dimen/button_font" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
